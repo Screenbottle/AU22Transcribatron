@@ -7,8 +7,36 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4284A64E29827BEE0018333F /* SpeechRecognizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A64D29827BEE0018333F /* SpeechRecognizer.swift */; };
+		4284A650298281F00018333F /* ScrumTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A64F298281F00018333F /* ScrumTimer.swift */; };
+		4284A652298282580018333F /* MeetingTimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A651298282580018333F /* MeetingTimerView.swift */; };
+		4284A6542982827D0018333F /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6532982827D0018333F /* Theme.swift */; };
+		4284A656298283110018333F /* Meeting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A655298283110018333F /* Meeting.swift */; };
+		4284A658298283430018333F /* History.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A657298283430018333F /* History.swift */; };
+		4284A65A2982839A0018333F /* SpeakerArc.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6592982839A0018333F /* SpeakerArc.swift */; };
+		4284A65C2982846F0018333F /* AVPlayer + Ding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A65B2982846F0018333F /* AVPlayer + Ding.swift */; };
+		4284A65E2982848F0018333F /* MeetingHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A65D2982848F0018333F /* MeetingHeaderView.swift */; };
+		4284A660298284BE0018333F /* ScrumProgressViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A65F298284BE0018333F /* ScrumProgressViewStyle.swift */; };
+		4284A662298285240018333F /* TrailingIconLabelStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A661298285240018333F /* TrailingIconLabelStyle.swift */; };
+		4284A6642982854B0018333F /* MeetingFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6632982854B0018333F /* MeetingFooterView.swift */; };
+		4284A666298287C70018333F /* ScrumStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A665298287C70018333F /* ScrumStore.swift */; };
+		4284A66829828C8A0018333F /* ErrorWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A66729828C8A0018333F /* ErrorWrapper.swift */; };
+		4284A66A2987D1070018333F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6692987D1070018333F /* TestView.swift */; };
+		4284A66C2987F9060018333F /* CircleButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A66B2987F9060018333F /* CircleButtonView.swift */; };
+		4284A66E2989186E0018333F /* MeetingTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A66D2989186E0018333F /* MeetingTimer.swift */; };
+		4284A6702994EB420018333F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4284A66F2994EB410018333F /* GoogleService-Info.plist */; };
+		4284A6732994ED080018333F /* FirebaseAnalyticsSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4284A6722994ED080018333F /* FirebaseAnalyticsSwift */; };
+		4284A6752994ED080018333F /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 4284A6742994ED080018333F /* FirebaseAuth */; };
+		4284A6772994ED080018333F /* FirebaseFirestoreSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4284A6762994ED080018333F /* FirebaseFirestoreSwift */; };
+		4284A6792994ED080018333F /* FirebaseRemoteConfigSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 4284A6782994ED080018333F /* FirebaseRemoteConfigSwift */; };
+		4284A67B2994F0FF0018333F /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A67A2994F0FF0018333F /* LoginView.swift */; };
+		4284A67D2994F75B0018333F /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A67C2994F75B0018333F /* FirestoreManager.swift */; };
+		4284A67F2994F7D00018333F /* Transcription.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A67E2994F7D00018333F /* Transcription.swift */; };
+		4284A6812994FCD80018333F /* AuthViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6802994FCD80018333F /* AuthViewModel.swift */; };
+		4284A6832994FD830018333F /* StartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6822994FD830018333F /* StartView.swift */; };
+		4284A6852994FDCF0018333F /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4284A6842994FDCF0018333F /* MainView.swift */; };
 		428B4433297FFEFF00848C80 /* AU22TranscribatronApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B4432297FFEFF00848C80 /* AU22TranscribatronApp.swift */; };
-		428B4435297FFEFF00848C80 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B4434297FFEFF00848C80 /* ContentView.swift */; };
+		428B4435297FFEFF00848C80 /* MeetingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B4434297FFEFF00848C80 /* MeetingView.swift */; };
 		428B4437297FFF0400848C80 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428B4436297FFF0400848C80 /* Assets.xcassets */; };
 		428B443A297FFF0400848C80 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 428B4439297FFF0400848C80 /* Preview Assets.xcassets */; };
 		428B4444297FFF0500848C80 /* AU22TranscribatronTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 428B4443297FFF0500848C80 /* AU22TranscribatronTests.swift */; };
@@ -34,9 +62,33 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4284A64D29827BEE0018333F /* SpeechRecognizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechRecognizer.swift; sourceTree = "<group>"; };
+		4284A64F298281F00018333F /* ScrumTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumTimer.swift; sourceTree = "<group>"; };
+		4284A651298282580018333F /* MeetingTimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTimerView.swift; sourceTree = "<group>"; };
+		4284A6532982827D0018333F /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4284A655298283110018333F /* Meeting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Meeting.swift; sourceTree = "<group>"; };
+		4284A657298283430018333F /* History.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = History.swift; sourceTree = "<group>"; };
+		4284A6592982839A0018333F /* SpeakerArc.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeakerArc.swift; sourceTree = "<group>"; };
+		4284A65B2982846F0018333F /* AVPlayer + Ding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AVPlayer + Ding.swift"; sourceTree = "<group>"; };
+		4284A65D2982848F0018333F /* MeetingHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingHeaderView.swift; sourceTree = "<group>"; };
+		4284A65F298284BE0018333F /* ScrumProgressViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumProgressViewStyle.swift; sourceTree = "<group>"; };
+		4284A661298285240018333F /* TrailingIconLabelStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrailingIconLabelStyle.swift; sourceTree = "<group>"; };
+		4284A6632982854B0018333F /* MeetingFooterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingFooterView.swift; sourceTree = "<group>"; };
+		4284A665298287C70018333F /* ScrumStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrumStore.swift; sourceTree = "<group>"; };
+		4284A66729828C8A0018333F /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
+		4284A6692987D1070018333F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
+		4284A66B2987F9060018333F /* CircleButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleButtonView.swift; sourceTree = "<group>"; };
+		4284A66D2989186E0018333F /* MeetingTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingTimer.swift; sourceTree = "<group>"; };
+		4284A66F2994EB410018333F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4284A67A2994F0FF0018333F /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		4284A67C2994F75B0018333F /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		4284A67E2994F7D00018333F /* Transcription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Transcription.swift; sourceTree = "<group>"; };
+		4284A6802994FCD80018333F /* AuthViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewModel.swift; sourceTree = "<group>"; };
+		4284A6822994FD830018333F /* StartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartView.swift; sourceTree = "<group>"; };
+		4284A6842994FDCF0018333F /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
 		428B442F297FFEFF00848C80 /* AU22Transcribatron.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AU22Transcribatron.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		428B4432297FFEFF00848C80 /* AU22TranscribatronApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AU22TranscribatronApp.swift; sourceTree = "<group>"; };
-		428B4434297FFEFF00848C80 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		428B4434297FFEFF00848C80 /* MeetingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeetingView.swift; sourceTree = "<group>"; };
 		428B4436297FFF0400848C80 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		428B4439297FFF0400848C80 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		428B443F297FFF0500848C80 /* AU22TranscribatronTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AU22TranscribatronTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,6 +103,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4284A6732994ED080018333F /* FirebaseAnalyticsSwift in Frameworks */,
+				4284A6792994ED080018333F /* FirebaseRemoteConfigSwift in Frameworks */,
+				4284A6752994ED080018333F /* FirebaseAuth in Frameworks */,
+				4284A6772994ED080018333F /* FirebaseFirestoreSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,10 +150,24 @@
 		428B4431297FFEFF00848C80 /* AU22Transcribatron */ = {
 			isa = PBXGroup;
 			children = (
+				4284A66F2994EB410018333F /* GoogleService-Info.plist */,
 				428B4432297FFEFF00848C80 /* AU22TranscribatronApp.swift */,
-				428B4434297FFEFF00848C80 /* ContentView.swift */,
+				4284A66B2987F9060018333F /* CircleButtonView.swift */,
+				4284A6632982854B0018333F /* MeetingFooterView.swift */,
+				4284A65D2982848F0018333F /* MeetingHeaderView.swift */,
+				4284A651298282580018333F /* MeetingTimerView.swift */,
+				428B4434297FFEFF00848C80 /* MeetingView.swift */,
+				4284A65F298284BE0018333F /* ScrumProgressViewStyle.swift */,
+				4284A6592982839A0018333F /* SpeakerArc.swift */,
+				4284A6692987D1070018333F /* TestView.swift */,
+				4284A661298285240018333F /* TrailingIconLabelStyle.swift */,
 				428B4436297FFF0400848C80 /* Assets.xcassets */,
+				428B445C298003AA00848C80 /* Models */,
 				428B4438297FFF0400848C80 /* Preview Content */,
+				4284A67A2994F0FF0018333F /* LoginView.swift */,
+				4284A67C2994F75B0018333F /* FirestoreManager.swift */,
+				4284A6822994FD830018333F /* StartView.swift */,
+				4284A6842994FDCF0018333F /* MainView.swift */,
 			);
 			path = AU22Transcribatron;
 			sourceTree = "<group>";
@@ -127,6 +197,24 @@
 			path = AU22TranscribatronUITests;
 			sourceTree = "<group>";
 		};
+		428B445C298003AA00848C80 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4284A65B2982846F0018333F /* AVPlayer + Ding.swift */,
+				4284A66729828C8A0018333F /* ErrorWrapper.swift */,
+				4284A657298283430018333F /* History.swift */,
+				4284A655298283110018333F /* Meeting.swift */,
+				4284A64F298281F00018333F /* ScrumTimer.swift */,
+				4284A665298287C70018333F /* ScrumStore.swift */,
+				4284A64D29827BEE0018333F /* SpeechRecognizer.swift */,
+				4284A6532982827D0018333F /* Theme.swift */,
+				4284A66D2989186E0018333F /* MeetingTimer.swift */,
+				4284A67E2994F7D00018333F /* Transcription.swift */,
+				4284A6802994FCD80018333F /* AuthViewModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -143,6 +231,12 @@
 			dependencies = (
 			);
 			name = AU22Transcribatron;
+			packageProductDependencies = (
+				4284A6722994ED080018333F /* FirebaseAnalyticsSwift */,
+				4284A6742994ED080018333F /* FirebaseAuth */,
+				4284A6762994ED080018333F /* FirebaseFirestoreSwift */,
+				4284A6782994ED080018333F /* FirebaseRemoteConfigSwift */,
+			);
 			productName = AU22Transcribatron;
 			productReference = 428B442F297FFEFF00848C80 /* AU22Transcribatron.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +309,9 @@
 				Base,
 			);
 			mainGroup = 428B4426297FFEFF00848C80;
+			packageReferences = (
+				4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 428B4430297FFEFF00848C80 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -232,6 +329,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				428B443A297FFF0400848C80 /* Preview Assets.xcassets in Resources */,
+				4284A6702994EB420018333F /* GoogleService-Info.plist in Resources */,
 				428B4437297FFF0400848C80 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -257,8 +355,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				428B4435297FFEFF00848C80 /* ContentView.swift in Sources */,
+				4284A656298283110018333F /* Meeting.swift in Sources */,
+				4284A65C2982846F0018333F /* AVPlayer + Ding.swift in Sources */,
+				4284A67F2994F7D00018333F /* Transcription.swift in Sources */,
+				4284A6832994FD830018333F /* StartView.swift in Sources */,
+				4284A660298284BE0018333F /* ScrumProgressViewStyle.swift in Sources */,
+				4284A6642982854B0018333F /* MeetingFooterView.swift in Sources */,
+				428B4435297FFEFF00848C80 /* MeetingView.swift in Sources */,
+				4284A658298283430018333F /* History.swift in Sources */,
+				4284A66C2987F9060018333F /* CircleButtonView.swift in Sources */,
+				4284A65A2982839A0018333F /* SpeakerArc.swift in Sources */,
+				4284A666298287C70018333F /* ScrumStore.swift in Sources */,
+				4284A66A2987D1070018333F /* TestView.swift in Sources */,
+				4284A66829828C8A0018333F /* ErrorWrapper.swift in Sources */,
+				4284A6852994FDCF0018333F /* MainView.swift in Sources */,
 				428B4433297FFEFF00848C80 /* AU22TranscribatronApp.swift in Sources */,
+				4284A66E2989186E0018333F /* MeetingTimer.swift in Sources */,
+				4284A65E2982848F0018333F /* MeetingHeaderView.swift in Sources */,
+				4284A662298285240018333F /* TrailingIconLabelStyle.swift in Sources */,
+				4284A67D2994F75B0018333F /* FirestoreManager.swift in Sources */,
+				4284A6812994FCD80018333F /* AuthViewModel.swift in Sources */,
+				4284A652298282580018333F /* MeetingTimerView.swift in Sources */,
+				4284A6542982827D0018333F /* Theme.swift in Sources */,
+				4284A64E29827BEE0018333F /* SpeechRecognizer.swift in Sources */,
+				4284A67B2994F0FF0018333F /* LoginView.swift in Sources */,
+				4284A650298281F00018333F /* ScrumTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -420,6 +541,8 @@
 				DEVELOPMENT_TEAM = DM6MS6HP9G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -449,6 +572,8 @@
 				DEVELOPMENT_TEAM = DM6MS6HP9G;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Audio is recorded to transcribe the meeting. Audio recordings are discarded after transcription.";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "You can view a text transcription of your meeting in the app";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -583,6 +708,40 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		4284A6722994ED080018333F /* FirebaseAnalyticsSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalyticsSwift;
+		};
+		4284A6742994ED080018333F /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		4284A6762994ED080018333F /* FirebaseFirestoreSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestoreSwift;
+		};
+		4284A6782994ED080018333F /* FirebaseRemoteConfigSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4284A6712994ED080018333F /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseRemoteConfigSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 428B4427297FFEFF00848C80 /* Project object */;
 }
