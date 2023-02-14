@@ -38,9 +38,11 @@ struct TestView: View {
                 .scaleEffect(circleTapped ? 1.1 : 1)
                 .onTapGesture(count: 1) {
                     
-                    Transcriber()
+                    if !self.circleTapped {
+                        Transcriber()
+                    }
                         
-                    self.circleTapped.toggle()
+                    self.circleTapped = true
                     
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         self.circleTapped = false
@@ -71,7 +73,7 @@ struct TestView: View {
             text = speechRecognizer.transcript
             
             let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "YY, MM, d, hh, mm"
+            dateFormatter.dateFormat = "d MMM y, HH:mm"
             
             
             if let startDate = meetingTimer.startDate,

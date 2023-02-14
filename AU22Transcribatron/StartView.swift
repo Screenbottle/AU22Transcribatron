@@ -15,7 +15,7 @@ struct StartView: View {
     var body: some View {
         Group {
         if authModel.user != nil {
-        MainView()
+        ContentView()
         } else {
         LoginView()
         }

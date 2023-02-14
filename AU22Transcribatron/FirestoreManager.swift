@@ -24,7 +24,8 @@ class FirestoreManager: ObservableObject {
                 for document in querySnapshot!.documents {
                         print("\(document.documentID): \(document.data())")
                     let data = document.data()
-
+                    
+                    
                     let text = data["transcription"] as? String ?? ""
                     let startDate = data["startdate"] as? String ?? ""
                     let endDate = data["endDate"] as? String ?? ""
@@ -34,6 +35,21 @@ class FirestoreManager: ObservableObject {
                         
                     self.transcriptions?.append(transcription)
                 }
+            }
+        }
+    }
+    
+    func updateTranscription(uid: String, name: String, editedText: String) {
+        let db = Firestore.firestore()
+        
+        let docRef = db.collection("users").document(uid).collection("personal").document(name)
+        
+        docRef.updateData(["transcription": editedText]) { error in
+            if let error = error {
+                print("Error updating document: \(error.localizedDescription)")
+            }
+            else {
+                print("Document successfully updated!")
             }
         }
     }
