@@ -20,13 +20,22 @@ struct ListView: View {
                 .ignoresSafeArea(.all)
             HStack {
                 List() {
-                    if let transcriptions = firestoreManager.transcriptions {
-                        ForEach(transcriptions) {transcription in
-                            NavigationLink(destination: TranscriptionView(transcription: transcription)
-                                .environmentObject(authModel)
-                                .environmentObject(firestoreManager))
-                            {
-                                TranscriptionListItem(transcription: transcription)
+                    if let dateSortedTranscriptions = firestoreManager.dateSortedTranscriptions {
+                        
+                        ForEach(dateSortedTranscriptions) { row in
+                            if let dayMonthYear = row.row.first?.dayMonthYear {
+                                Section(header: Text(dayMonthYear)) {
+                                    
+                                    ForEach(row.row) {transcription in
+                                        NavigationLink(destination: TranscriptionView(transcription: transcription)
+                                            .environmentObject(authModel)
+                                            .environmentObject(firestoreManager))
+                                        {
+                                            TranscriptionListItem(transcription: transcription)
+                                        }
+                                    }
+                                }
+                                .headerProminence(.increased)
                             }
                         }
                         
@@ -38,6 +47,8 @@ struct ListView: View {
             .onAppear {
                 if let uid = authModel.user?.uid {
                     firestoreManager.fetchTranscriptions(uid: uid)
+                    
+
                 }
             }
         }

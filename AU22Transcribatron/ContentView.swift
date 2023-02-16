@@ -17,6 +17,8 @@ struct ContentView: View {
         TabView(selection: $selectedTab) {
             
             CalendarView()
+                .environmentObject(authModel)
+                .environmentObject(firestoreManager)
                 .tabItem {
                     Image(systemName: "calendar.circle")
                     Text("Kalender")

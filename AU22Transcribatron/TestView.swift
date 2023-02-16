@@ -30,6 +30,7 @@ struct TestView: View {
             
             VStack {
                 Text("\(meetingTimer.timeElapsed)")
+                    .font(.largeTitle)
                 
                 Spacer()
                 
@@ -50,8 +51,6 @@ struct TestView: View {
                 }
                 
                 Spacer()
-                
-                Text("\(text)")
             }
             .padding()
                 
@@ -72,19 +71,26 @@ struct TestView: View {
             meetingTimer.stopTimer()
             text = speechRecognizer.transcript
             
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "d MMM y, HH:mm"
+            let timeFormatter = DateFormatter()
+            timeFormatter.dateFormat = "HH:mm"
+            
+            let dmyFormatter = DateFormatter()
+            dmyFormatter.dateFormat = "E, d MM, yyyy"
             
             
             if let startDate = meetingTimer.startDate,
                let endDate = meetingTimer.endDate {
                 
-                let transcription = Transcription(transcription: text, startDate: dateFormatter.string(from: startDate), endDate: dateFormatter.string(from: endDate), duration: meetingTimer.timeElapsed)
+                let transcription = Transcription(transcription: text, startTime: timeFormatter.string(from: startDate), endTime: timeFormatter.string(from: endDate), duration: meetingTimer.timeElapsed, dayMonthYear: dmyFormatter.string(from: startDate), date: startDate)
                 if let uid = authModel.user?.uid {
-                    firestoreManager.uploadTranscription(uid: uid, name: dateFormatter.string(from: startDate), transcription: transcription)
+                    
+                    let name = dmyFormatter.string(from: startDate) + " " + timeFormatter.string(from: startDate)
+                    firestoreManager.uploadTranscription(uid: uid, name: name, transcription: transcription)
                 }
                 
             }
+            
+            meetingTimer.resetTimer()
                 
             
             

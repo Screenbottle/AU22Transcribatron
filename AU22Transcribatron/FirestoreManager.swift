@@ -11,6 +11,7 @@ import Firebase
 class FirestoreManager: ObservableObject {
 
     @Published var transcriptions: [Transcription]?
+    @Published var dateSortedTranscriptions: [TranscriptionRow]?
     
     func fetchTranscriptions(uid: String) {
         let db = Firestore.firestore()
@@ -20,21 +21,33 @@ class FirestoreManager: ObservableObject {
                 print("Error getting documents: \(error.localizedDescription)")
                 
             } else {
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "E, d MM, yyyy HH:mm"
+                
                 self.transcriptions = []
                 for document in querySnapshot!.documents {
-                        print("\(document.documentID): \(document.data())")
+                        //print("\(document.documentID): \(document.data())")
                     let data = document.data()
                     
                     
                     let text = data["transcription"] as? String ?? ""
-                    let startDate = data["startdate"] as? String ?? ""
-                    let endDate = data["endDate"] as? String ?? ""
+                    let startTime = data["startTime"] as? String ?? ""
+                    let endTime = data["endTime"] as? String ?? ""
                     let duration = data["duration"] as? String ?? ""
+                    let dayMonthYear = data["dayMonthYear"] as? String ?? ""
                     
-                    let transcription = Transcription(transcription: text, startDate: startDate, endDate: endDate, duration: duration)
+                    let fullDateString = dayMonthYear + " " + startTime
+                    
+                    if let date = dateFormatter.date(from: fullDateString) {
                         
-                    self.transcriptions?.append(transcription)
+                        let transcription = Transcription(transcription: text, startTime: startTime, endTime: endTime, duration: duration, dayMonthYear: dayMonthYear, date: date)
+                        
+                        self.transcriptions?.append(transcription)
+                    }
                 }
+                
+                self.sortByDate()
             }
         }
     }
@@ -56,7 +69,7 @@ class FirestoreManager: ObservableObject {
     
     func uploadTranscription(uid: String, name: String, transcription: Transcription) {
         let db = Firestore.firestore()
-        let docData: [String:Any] = ["transcription": transcription.transcription, "startdate": transcription.startDate, "enddate": transcription.endDate, "duration": transcription.duration]
+        let docData: [String:Any] = ["transcription": transcription.transcription, "startTime": transcription.startTime, "endTime": transcription.endTime, "duration": transcription.duration, "dayMonthYear": transcription.dayMonthYear]
         
         let docRef = db.collection("users").document(uid).collection("personal").document(name)
         
@@ -69,6 +82,35 @@ class FirestoreManager: ObservableObject {
             }
         }
         
+        
+    }
+    
+    func sortByDate() {
+        print("is run")
+        if let transcriptions = self.transcriptions {
+            
+            print("gets run more")
+            self.dateSortedTranscriptions = []
+            
+            var row = TranscriptionRow()
+            
+            for transcription in transcriptions {
+                if transcription.dayMonthYear == row.row.last?.dayMonthYear || row.row.isEmpty {
+                    row.row.append(transcription)
+                    
+                    print(row.row as Any)
+                }
+                else {
+                    self.dateSortedTranscriptions?.append(row)
+                    row = TranscriptionRow()
+                    row.row.append(transcription)
+                    
+                    
+                }
+            }
+            
+            self.dateSortedTranscriptions?.append(row)
+        }
         
     }
     

@@ -47,7 +47,9 @@
 		42921C62299B958C00158CEB /* TranscriptionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C61299B958C00158CEB /* TranscriptionView.swift */; };
 		42921C64299BC6FB00158CEB /* Toast.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C63299BC6FB00158CEB /* Toast.swift */; };
 		42921C67299BCC9100158CEB /* FSCalendar in Frameworks */ = {isa = PBXBuildFile; productRef = 42921C66299BCC9100158CEB /* FSCalendar */; };
-		42921C6B299BD02600158CEB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C6A299BD02600158CEB /* CalendarView.swift */; };
+		42921C6B299BD02600158CEB /* BadCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C6A299BD02600158CEB /* BadCalendarView.swift */; };
+		42921C6D299E33D100158CEB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C6C299E33D100158CEB /* CalendarView.swift */; };
+		42921C71299E636100158CEB /* TranscriptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C70299E636100158CEB /* TranscriptionRow.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -106,7 +108,9 @@
 		42921C5D299B82F200158CEB /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		42921C61299B958C00158CEB /* TranscriptionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionView.swift; sourceTree = "<group>"; };
 		42921C63299BC6FB00158CEB /* Toast.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toast.swift; sourceTree = "<group>"; };
-		42921C6A299BD02600158CEB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		42921C6A299BD02600158CEB /* BadCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadCalendarView.swift; sourceTree = "<group>"; };
+		42921C6C299E33D100158CEB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
+		42921C70299E636100158CEB /* TranscriptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionRow.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,7 +187,8 @@
 				428B4436297FFF0400848C80 /* Assets.xcassets */,
 				428B445C298003AA00848C80 /* Models */,
 				428B4438297FFF0400848C80 /* Preview Content */,
-				42921C6A299BD02600158CEB /* CalendarView.swift */,
+				42921C6A299BD02600158CEB /* BadCalendarView.swift */,
+				42921C6C299E33D100158CEB /* CalendarView.swift */,
 			);
 			path = AU22Transcribatron;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				4284A67E2994F7D00018333F /* Transcription.swift */,
 				4284A6802994FCD80018333F /* AuthViewModel.swift */,
 				42921C63299BC6FB00158CEB /* Toast.swift */,
+				42921C70299E636100158CEB /* TranscriptionRow.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -376,7 +382,7 @@
 			files = (
 				4284A656298283110018333F /* Meeting.swift in Sources */,
 				4284A65C2982846F0018333F /* AVPlayer + Ding.swift in Sources */,
-				42921C6B299BD02600158CEB /* CalendarView.swift in Sources */,
+				42921C6B299BD02600158CEB /* BadCalendarView.swift in Sources */,
 				4284A67F2994F7D00018333F /* Transcription.swift in Sources */,
 				4284A6832994FD830018333F /* StartView.swift in Sources */,
 				4284A660298284BE0018333F /* ScrumProgressViewStyle.swift in Sources */,
@@ -386,6 +392,7 @@
 				4284A658298283430018333F /* History.swift in Sources */,
 				4284A66C2987F9060018333F /* CircleButtonView.swift in Sources */,
 				4284A65A2982839A0018333F /* SpeakerArc.swift in Sources */,
+				42921C6D299E33D100158CEB /* CalendarView.swift in Sources */,
 				4284A666298287C70018333F /* ScrumStore.swift in Sources */,
 				4284A66A2987D1070018333F /* TestView.swift in Sources */,
 				4284A66829828C8A0018333F /* ErrorWrapper.swift in Sources */,
@@ -398,6 +405,7 @@
 				4284A662298285240018333F /* TrailingIconLabelStyle.swift in Sources */,
 				4284A67D2994F75B0018333F /* FirestoreManager.swift in Sources */,
 				4284A6812994FCD80018333F /* AuthViewModel.swift in Sources */,
+				42921C71299E636100158CEB /* TranscriptionRow.swift in Sources */,
 				4284A652298282580018333F /* MeetingTimerView.swift in Sources */,
 				42921C5C299A4F5500158CEB /* TranscriptionListItem.swift in Sources */,
 				4284A6542982827D0018333F /* Theme.swift in Sources */,

@@ -42,6 +42,10 @@ class MeetingTimer : ObservableObject {
         
     }
     
+    func resetTimer() {
+        timeElapsed = "00:00:00"
+    }
+    
     func stopTimer() {
         timer?.invalidate()
         timer = nil

@@ -34,12 +34,10 @@ struct TranscriptionView: View {
             }
             .padding()
         }
-        .toast(message: "Saving edits...",
-                     isShowing: $showToast,
-                     duration: Toast.short)
+        .toast(message: "Saving", isShowing: $showToast, duration: Toast.short)
         .toolbar {
             ToolbarItem {
-                Text(transcription.startDate)
+                Text(transcription.startTime + " " + transcription.dayMonthYear)
             }
         }
         .onAppear {
@@ -49,7 +47,7 @@ struct TranscriptionView: View {
     
     func saveEdits() {
         if let uid = authModel.user?.uid {
-            firestoreManager.updateTranscription(uid: uid, name: transcription.startDate, editedText: editedText)
+            firestoreManager.updateTranscription(uid: uid, name: transcription.dayMonthYear + " " + transcription.startTime, editedText: editedText)
         }
     }
     

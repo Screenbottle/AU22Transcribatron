@@ -11,14 +11,18 @@ class Transcription : ObservableObject, Identifiable{
     
     @Published var id = UUID()
     @Published var transcription : String
-    @Published var startDate : String
-    @Published var endDate : String
+    @Published var startTime : String
+    @Published var endTime : String
     @Published var duration : String
+    @Published var dayMonthYear: String
+    @Published var date: Date
     
-    init(transcription: String, startDate : String, endDate : String, duration : String) {
+    init(transcription: String, startTime : String, endTime : String, duration : String, dayMonthYear: String, date: Date) {
         self.transcription = transcription
-        self.startDate = startDate
-        self.endDate = endDate
+        self.startTime = startTime
+        self.endTime = endTime
         self.duration = duration
+        self.dayMonthYear = dayMonthYear
+        self.date = date
     }
 }
