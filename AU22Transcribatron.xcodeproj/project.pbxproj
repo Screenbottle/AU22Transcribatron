@@ -50,6 +50,8 @@
 		42921C6B299BD02600158CEB /* BadCalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C6A299BD02600158CEB /* BadCalendarView.swift */; };
 		42921C6D299E33D100158CEB /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C6C299E33D100158CEB /* CalendarView.swift */; };
 		42921C71299E636100158CEB /* TranscriptionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C70299E636100158CEB /* TranscriptionRow.swift */; };
+		42921C7329A4BE1B00158CEB /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C7229A4BE1B00158CEB /* ProfileView.swift */; };
+		42921C7529A4DA3400158CEB /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42921C7429A4DA3400158CEB /* Team.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -111,6 +113,8 @@
 		42921C6A299BD02600158CEB /* BadCalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BadCalendarView.swift; sourceTree = "<group>"; };
 		42921C6C299E33D100158CEB /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 		42921C70299E636100158CEB /* TranscriptionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranscriptionRow.swift; sourceTree = "<group>"; };
+		42921C7229A4BE1B00158CEB /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		42921C7429A4DA3400158CEB /* Team.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -189,6 +193,7 @@
 				428B4438297FFF0400848C80 /* Preview Content */,
 				42921C6A299BD02600158CEB /* BadCalendarView.swift */,
 				42921C6C299E33D100158CEB /* CalendarView.swift */,
+				42921C7229A4BE1B00158CEB /* ProfileView.swift */,
 			);
 			path = AU22Transcribatron;
 			sourceTree = "<group>";
@@ -234,6 +239,7 @@
 				4284A6802994FCD80018333F /* AuthViewModel.swift */,
 				42921C63299BC6FB00158CEB /* Toast.swift */,
 				42921C70299E636100158CEB /* TranscriptionRow.swift */,
+				42921C7429A4DA3400158CEB /* Team.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -388,6 +394,7 @@
 				4284A660298284BE0018333F /* ScrumProgressViewStyle.swift in Sources */,
 				4284A6642982854B0018333F /* MeetingFooterView.swift in Sources */,
 				428B4435297FFEFF00848C80 /* MeetingView.swift in Sources */,
+				42921C7529A4DA3400158CEB /* Team.swift in Sources */,
 				42921C64299BC6FB00158CEB /* Toast.swift in Sources */,
 				4284A658298283430018333F /* History.swift in Sources */,
 				4284A66C2987F9060018333F /* CircleButtonView.swift in Sources */,
@@ -411,6 +418,7 @@
 				4284A6542982827D0018333F /* Theme.swift in Sources */,
 				4284A64E29827BEE0018333F /* SpeechRecognizer.swift in Sources */,
 				4284A67B2994F0FF0018333F /* LoginView.swift in Sources */,
+				42921C7329A4BE1B00158CEB /* ProfileView.swift in Sources */,
 				4284A650298281F00018333F /* ScrumTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

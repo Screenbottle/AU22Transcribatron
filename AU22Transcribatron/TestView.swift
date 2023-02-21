@@ -20,6 +20,9 @@ struct TestView: View {
     @State private var isRecording = false
     @State private var text = ""
     
+    @State var options: [String] = [""]
+    @State var selectedItem = ""
+    
     
     var body: some View {
         ZStack {
@@ -31,6 +34,14 @@ struct TestView: View {
             VStack {
                 Text("\(meetingTimer.timeElapsed)")
                     .font(.largeTitle)
+                
+                Picker("Välj grupp", selection: $selectedItem) {
+                    ForEach(options, id: \.self) { item in
+                        Text(item)
+                    }
+                }
+                .disabled(isRecording)
+                
                 
                 Spacer()
                 
@@ -56,7 +67,15 @@ struct TestView: View {
                 
             
         }
-        
+        .onAppear {
+            if let uid = authModel.user?.uid {
+                firestoreManager.fetchTeams(uid: uid)
+                
+                if let teams = firestoreManager.teams {
+                    options.append(contentsOf: teams)
+                }
+            }
+        }
         .onDisappear {
             meetingTimer.stopTimer()
             speechRecognizer.stopTranscribing()
@@ -85,7 +104,12 @@ struct TestView: View {
                 if let uid = authModel.user?.uid {
                     
                     let name = dmyFormatter.string(from: startDate) + " " + timeFormatter.string(from: startDate)
-                    firestoreManager.uploadTranscription(uid: uid, name: name, transcription: transcription)
+                    if selectedItem.isEmpty {
+                        firestoreManager.uploadTranscription(uid: uid, name: name, transcription: transcription)
+                    }
+                    else {
+                        
+                    }
                 }
                 
             }

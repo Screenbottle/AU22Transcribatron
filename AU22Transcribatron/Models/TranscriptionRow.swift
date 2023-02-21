@@ -10,4 +10,5 @@ import Foundation
 class TranscriptionRow: Identifiable {
     var uuid = UUID()
     var row: [Transcription] = []
+    var teamName = ""
 }

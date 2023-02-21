@@ -42,6 +42,15 @@ struct ContentView: View {
                     Text("Inspelning")
                 }
                 .tag(2)
+            
+            ProfileView()
+                .environmentObject(authModel)
+                .environmentObject(firestoreManager)
+                .tabItem {
+                    Image(systemName: "person.crop.circle")
+                    Text("Profil")
+                }
+                .tag(3)
         }
     }
 }
