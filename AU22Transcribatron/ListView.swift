@@ -24,11 +24,11 @@ struct ListView: View {
             HStack {
                 Form {
                     Section {
-                        Picker("Personlinga/Delade", selection: $choice) {
+                        /*Picker("Personlinga/Delade", selection: $choice) {
                             Text(selections[0])
                             Text(selections[1])
                         }
-                        .pickerStyle(SegmentedPickerStyle())
+                        .pickerStyle(SegmentedPickerStyle()) */
                         List() {
                             if choice == 0 {
                                 if let dateSortedTranscriptions = firestoreManager.dateSortedTranscriptions {

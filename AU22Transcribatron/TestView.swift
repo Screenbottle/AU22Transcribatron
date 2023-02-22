@@ -72,6 +72,7 @@ struct TestView: View {
                 firestoreManager.fetchTeams(uid: uid)
                 
                 if let teams = firestoreManager.teams {
+                    options = [""]
                     options.append(contentsOf: teams)
                 }
             }

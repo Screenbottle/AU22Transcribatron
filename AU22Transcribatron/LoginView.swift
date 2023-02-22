@@ -16,24 +16,49 @@ struct LoginView: View {
     
 
     var body: some View {
-        VStack {
-            TextField("Email", text: $email)
-            .textContentType(.emailAddress)
-            .textInputAutocapitalization(.never)
-            .disableAutocorrection(true)
-            .keyboardType(.emailAddress)
-            SecureField("Password", text: $password)
-            .textContentType(.password)
-            .keyboardType(.default)
-            Button(action: { authModel.signIn(email: email, password: password) }) {
-                Text("Sign in")
-            }
-            Button(action: { authModel.signUp( email: email, password: password) }) {
-                Text("Sign up")
+        ZStack {
+            Rectangle()
+                .fill(Color("Background"))
+                .frame(maxWidth: .infinity, maxHeight: .infinity)
+                .ignoresSafeArea(.all)
+            VStack {
+                Image("icon")
+                    .resizable()
+                    .scaledToFit()
                 
+                Spacer()
+                
+                Text("Transcribatron")
+                    .font(.largeTitle)
+                
+                TextField("Email", text: $email)
+                    .textContentType(.emailAddress)
+                    .textInputAutocapitalization(.never)
+                    .disableAutocorrection(true)
+                    .keyboardType(.emailAddress)
+                    .backgroundStyle(.white)
+                    .border(.gray)
+                SecureField("Password", text: $password)
+                    .textContentType(.password)
+                    .keyboardType(.default)
+                    .backgroundStyle(.white)
+                    .border(.gray)
+                    Button(action: { authModel.signIn(email: email, password: password) }) {
+                    Text("Sign in")
+                }
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.automatic)
+                
+                Button(action: { authModel.signUp( email: email, password: password) }) {
+                    Text("Sign up")
+                }
+                .buttonStyle(.bordered)
+                .buttonBorderShape(.automatic)
+                
+                Spacer()
             }
+            .padding()
         }
-        .padding()
     }
 }
 
