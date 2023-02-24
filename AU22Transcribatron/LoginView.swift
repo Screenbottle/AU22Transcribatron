@@ -43,7 +43,8 @@ struct LoginView: View {
                     .keyboardType(.default)
                     .backgroundStyle(.white)
                     .border(.gray)
-                    Button(action: { authModel.signIn(email: email, password: password) }) {
+                
+                Button(action: { authModel.signIn(email: email, password: password) }) {
                     Text("Sign in")
                 }
                 .buttonStyle(.bordered)
