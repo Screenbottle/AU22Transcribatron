@@ -24,6 +24,7 @@ struct ListView: View {
             HStack {
                 Form {
                     Section {
+                        // didn't work the way i wanted it to, no time to fix it :(
                         /*Picker("Personlinga/Delade", selection: $choice) {
                             Text(selections[0])
                             Text(selections[1])

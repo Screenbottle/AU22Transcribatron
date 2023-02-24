@@ -105,11 +105,13 @@ struct TestView: View {
                 if let uid = authModel.user?.uid {
                     
                     let name = dmyFormatter.string(from: startDate) + " " + timeFormatter.string(from: startDate)
+                    
+                    // if the user has selected a team, uploads the transcription to that teams collection, otherwise adds it to the users personal collection
                     if selectedItem.isEmpty {
                         firestoreManager.uploadTranscription(uid: uid, name: name, transcription: transcription)
                     }
                     else {
-                        
+                        firestoreManager.uploadSharedTranscription(uid: uid, teamName: selectedItem, name: name, transcription: transcription)
                     }
                 }
                 
